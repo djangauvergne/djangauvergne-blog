@@ -1,0 +1,124 @@
+body {
+    z-index: 1;
+    background-image: url('../images/rockywall.png');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 { font-size:ms(7) }
+h2 {
+    font-size:ms(5);
+    border-bottom: 1px dotted $mainColor;
+}
+h3 { font-size:ms(4) }
+h4 { font-size:ms(3) }
+h5 { font-size:ms(2) }
+h6 { font-size:ms(1) }
+
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left:0;
+    padding-left: 1em;
+    text-indent: -1em;
+    li:before {
+        content:"\00BB \0020";
+    }
+    &.side-nav, &.link-list {
+        list-style: none inside none;
+        text-indent:0;
+        li {
+            &:before { content:"" }
+            a {
+                display: inline;
+            }
+        }
+    }
+}
+
+aside p { font-style: normal }
+
+blockquote p {
+    color: lighten($txtColor, 30%);
+    font-style: italic;
+}
+
+.panel {
+    background: rgba(lighten($tertiaryColor, 10%), 0.5);
+    @include border-radius(5px);
+}
+
+header {
+    ul.nav {
+        list-style-type: none;
+        height:40px;
+        padding-top:20px;
+
+        li {
+            display: block;
+            float: left;
+            padding-right:30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:before {
+                content:"< ";
+            }
+            &:after {
+                content:" />";
+            }
+            a {
+                position:relative;
+                z-index:20;
+                color:$txtColor;
+                &:hover { color:$mainColor }
+            }
+        }
+    }
+
+    #brand {
+        & > div {
+            position: absolute;
+            top:10px;
+        }
+        #brand_bg { z-index:10 }
+        #brand_title { z-index:11 }
+        #brand_poney { z-index:12 }
+    }
+}
+
+#content-wrapper {
+    margin-top:370px;
+
+    div[role="content"] {
+        background: rgba(#fff, 0.4);
+        @include border-radius(15px);
+
+        .entry-title {
+            position:relative;
+            z-index:20;
+            @include text-shadow(#fff 1px 1px 5px);
+        }
+    }
+
+    & > aside {
+        position:relative;
+        z-index:20;
+    }
+}
+
+#footer-wrapper {
+    background:$txtColor;
+    @include box-shadow($txtColor -5px 0 10px);
+    color:#fff;
+    margin-top: 30px;
+    padding-top: 30px;
+    min-height: 100px;
+
+    footer {
+        * {
+            font-size: 14px;
+        }
+    }
+}
