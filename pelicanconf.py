@@ -3,7 +3,7 @@
 
 AUTHOR = u"DjangAuvergnat"
 SITENAME = u"DjangAuvergne"
-SITEURL = ''
+SITEURL = 'http://auvergne.django-fr.org'
 SITESUBTITLE = u'Le blog des poneys élevés au bleu'
 
 TIMEZONE = 'Europe/Paris'
@@ -18,6 +18,5 @@ LINKS =  (('Django-fr', 'http://django-fr.org'),
 # Social widget
 SOCIAL = (('Twitter', 'http://twitter.com/DjangAuvergne'),
           ('IRC','irc://chat.freenode.net:6667/djangauvergne'),)
-
 
 DEFAULT_PAGINATION = 10
