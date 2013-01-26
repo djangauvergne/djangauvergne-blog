@@ -33,3 +33,5 @@ Une fois que nous aurons trouvé un nom, la liste de diffusion, nom de domaine, 
 Bien à toi.
 
 [Julien](https://twitter.com/julienmaupetit)
+
+PS : s'il est incomplet ou complètement fallacieux, ce billet peut être modifié sur le repository [GitHub](https://github.com/djangauvergne/djangauvergne-blog) du blog.
